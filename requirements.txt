@@ -1,0 +1,13 @@
+latex2mathml
+django
+tmdbv3api
+pillow
+# runsslserver
+djangorestframework
+jsonfield
+whitenoise
+gunicorn
+djangorestframework
+markdown
+django-filter
+django-cors-headers

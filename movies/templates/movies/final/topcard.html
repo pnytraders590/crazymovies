@@ -1,0 +1,40 @@
+{% load static %}
+<div class="buddy">
+  <div class="slider">
+    <div class="slide_track">
+      {% for item in nowplayingmovies %}
+
+      <div class="slide">
+        <div class="poster">
+          <div class="flip-card_i">
+            <a
+              href="{% url 'movie_detail' item.id item.title %}"
+              target="_blank"
+            >
+              <img
+                src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{ item.poster_path }}"
+                alt="Avatar"
+                style="width: 250px; height: 360px"
+              />
+            </a>
+            <a href="https://xpshort.com/movieslink" target="_blank">
+              <h2>{{item.title}}</h2>
+            </a>
+            <br />
+            <br />
+
+            <p class="para_i">{{ item.overview }}</p>
+
+            <div class="flim">
+              <b>{{item.title}}</b><br />IMDb - {{item.vote_average}}
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>

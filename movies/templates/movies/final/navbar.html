@@ -1,0 +1,166 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'MainHome' %}"
+      ><img
+        class="logo"
+        src="{% static 'images/TheaterLogoFinal.png' %}"
+        alt=""
+        width="30"
+        height="24"
+    /></a>
+    <button
+      id="nav"
+      class="navbar-toggler"
+      style="background-color: #8b0000"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon" style="background-color: grey"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active s"
+            aria-current="page"
+            href="{% url 'MainHome' %}"
+            onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='white'"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'movie_category' 'Bollywood' %}"
+            onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='white'"
+            >Bollywood Movies</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'movie_category' 'webseries' %}"
+            onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='white'"
+            >Web Series</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'movie_category' 'animation' %}"
+            onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='white'"
+            >Kids</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'movie_category' 'tv' %}"
+            onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='white'"
+            >TV</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'movie_category' 'premium' %}"
+            onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='white'"
+            >Premium</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="{% url 'MainHome' %}"
+            onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='white'"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <!-- Genre dropdown starts-->
+          <div>
+            <div
+              class="dropdown"
+              style="
+                position: relative;
+                display: inline-block;
+                padding-top: 5px;
+                padding-left: 15px;
+              "
+            >
+              <button
+                class="btn btn-outline-danger dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                style="font-size: 20px"
+              >
+                Genres
+              </button>
+              <div class="dropdown-content" style="color: white">
+                <a href="{% url 'movie_category' 'Bollywood' %}">Bollywood</a>
+                <a href="{% url 'movie_category' 'crime' %}">Crime</a>
+                <a href="{% url 'movie_category' 'comedy' %}">Comedy</a>
+                <a href="{% url 'movie_category' 'romance' %}">Romance</a>
+                <a href="{% url 'movie_category' 'drama' %}">Drama</a>
+                <a href="{% url 'movie_category' 'action' %}">Action</a>
+                <a href="{% url 'movie_category' 'thriller' %}">Thriller</a>
+                <a href="{% url 'movie_category' 'documentary' %}"
+                  >Documentary</a
+                >
+                <a href="{% url 'movie_category' 'adventure' %}">Adventure</a>
+                <a href="{% url 'movie_category' 'Science Fiction' %}"
+                  >Science Fiction</a
+                >
+                <a href="{% url 'movie_category' 'mystery' %}">Mystery</a>
+                <a href="{% url 'movie_category' 'horror' %}">Horror</a>
+                <a href="{% url 'movie_category' 'animation' %}">Animation</a>
+                <a href="{% url 'movie_category' 'fantasy' %}">Fantasy</a>
+                <a href="{% url 'movie_category' 'family' %}">family</a>
+                <a href="{% url 'movie_category' 'music' %}">music</a>
+                <a href="{% url 'movie_category' 'war' %}">war</a>
+                <a href="{% url 'movie_category' 'mystery' %}">mystery</a>
+              </div>
+            </div>
+          </div>
+          <!-- Genre dropdown ends-->
+        </li>
+        <li>
+          <button
+            type="button"
+            class="btn btn-light"
+            onclick="logout()"
+            onMouseOver="this.style.color='red'"
+            onMouseOut="this.style.color='white'"
+          >
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+    <form id="searchForm" class="d-flex">
+      <input
+        class="form-control me-2"
+        type="text"
+        id="searchText"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-danger" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- navbar ends -->
