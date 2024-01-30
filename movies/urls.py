@@ -38,9 +38,9 @@ urlpatterns = [
         ),
     ),
     path(
-        "6e59aa9b995945ef8295d8e5c4528883.txt",
+        "e1898ccc758e425cbc6b138f820be49a.txt",
         TemplateView.as_view(
-            template_name="movies/6e59aa9b995945ef8295d8e5c4528883.txt",
+            template_name="movies/e1898ccc758e425cbc6b138f820be49a.txt",
             content_type="text/plain",
         ),
     ),
